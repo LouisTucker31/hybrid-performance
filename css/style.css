@@ -614,10 +614,10 @@ body[data-page="home"] .ath-tag { border-radius: 0; }
 .page-hero-dark p { color: rgba(255,255,255,0.82); font-size: var(--fs-md); max-width: 56ch; margin-inline: auto; }
 
 /* ---------- Page hero (photo, shorter than home hero) ---------- */
-.page-hero-photo { position: relative; overflow: hidden; min-height: clamp(300px, 38vh, 420px); display: flex; align-items: center; }
+.page-hero-photo { position: relative; overflow: hidden; min-height: clamp(380px, 48vh, 500px); display: flex; align-items: center; }
 .page-hero-photo__bg { position: absolute; inset: 0; z-index: 0; }
-.page-hero-photo__bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; display: block; }
-.page-hero-photo__overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18,20,15,0.5) 0%, rgba(18,20,15,0.8) 100%); }
+.page-hero-photo__bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; display: block; }
+.page-hero-photo__overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18,20,15,0.32) 0%, rgba(18,20,15,0.62) 100%); }
 .page-hero-photo__content { position: relative; z-index: 1; text-align: center; width: 100%; }
 .page-hero-photo__content .eyebrow { color: #7de3ab; text-align: center; }
 .page-hero-photo__content h1 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.2px; color: #fff; font-size: clamp(1.85rem, 4vw, 2.75rem); margin-bottom: 0.6rem; }
