@@ -12,7 +12,7 @@
 <header class="site-header">
   <div class="container">
     <nav class="nav" aria-label="Primary">
-      <a class="brand" href="./">Hybrid Performance<span>.</span></a>
+      <li><a href="./" data-page="home">Home</a></li>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
