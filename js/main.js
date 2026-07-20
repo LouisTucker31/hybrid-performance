@@ -11,17 +11,17 @@
 <header class="site-header">
   <div class="container">
     <nav class="nav" aria-label="Primary">
-      <a class="brand" href="/">Hybrid Performance<span>.</span></a>
+      <a class="brand" href="./">Hybrid Performance<span>.</span></a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="/" data-page="home">Home</a></li>
-        <li><a href="/about/" data-page="about">About</a></li>
-        <li><a href="/coaching/" data-page="coaching">Bespoke</a></li>
-        <li><a href="/plans/" data-page="plans">Plans</a></li>
-        <li><a href="/tools/" data-page="tools">Free Tools</a></li>
-        <li><a href="/contact/" data-page="contact">Contact</a></li>
+        <li><a href="./" data-page="home">Home</a></li>
+        <li><a href="about/" data-page="about">About</a></li>
+        <li><a href="coaching/" data-page="coaching">Bespoke</a></li>
+        <li><a href="plans/" data-page="plans">Plans</a></li>
+        <li><a href="tools/" data-page="tools">Free Tools</a></li>
+        <li><a href="contact/" data-page="contact">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -31,14 +31,14 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <ul class="footer-nav">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about/">About</a></li>
-      <li><a href="/coaching/">Bespoke</a></li>
-      <li><a href="/plans/">Plans</a></li>
-      <li><a href="/tools/">Free Tools</a></li>
-      <li><a href="/contact/">Contact</a></li>
-      <li><a href="/privacy/">Privacy Policy</a></li>
-      <li><a href="/terms/">Terms of Service</a></li>
+      <li><a href="./">Home</a></li>
+      <li><a href="about/">About</a></li>
+      <li><a href="coaching/">Bespoke</a></li>
+      <li><a href="plans/">Plans</a></li>
+      <li><a href="tools/">Free Tools</a></li>
+      <li><a href="contact/">Contact</a></li>
+      <li><a href="privacy/">Privacy Policy</a></li>
+      <li><a href="terms/">Terms of Service</a></li>
     </ul>
     <div class="footer-meta-group">
       <ul class="footer-social">
