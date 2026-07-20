@@ -42,6 +42,12 @@
 
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  --ath-bg: #12140f;
+  --ath-bg-soft: #1b1f18;
+  --ath-mint: #7de3ab;
+  --ath-mint-ink: #0c2b19;
+  --font-ath: 'Oswald', sans-serif;
 }
 
 @media (max-width: 420px) {
@@ -303,22 +309,6 @@ main { flex: 1; }
   font-weight: 600; font-size: var(--fs-md); color: var(--ink);
 }
 .faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary::after {
-  content: "+"; font-size: var(--fs-lg); color: var(--accent); flex-shrink: 0;
-  transition: transform 0.15s ease;
-}
-.faq-item[open] summary::after { transform: rotate(45deg); }
-.faq-item p { padding-bottom: 1rem; color: var(--ink-soft); font-size: var(--fs-base); }
-
-/* ---------- FAQ ---------- */
-.faq-item { border-top: 1px solid var(--line); }
-.faq-item:last-child { border-bottom: 1px solid var(--line); }
-.faq-item summary {
-  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-  padding: 1rem 0; cursor: pointer; list-style: none;
-  font-weight: 600; font-size: var(--fs-md); color: var(--ink);
-}
-.faq-item summary::-webkit-details-marker { display: none; }
 .faq-item summary::marker { content: ""; }
 .faq-item summary::after {
   content: "+"; font-size: var(--fs-lg); color: var(--accent); flex-shrink: 0;
@@ -501,15 +491,8 @@ main { flex: 1; }
 }
 
 /* ==========================================================
-   Homepage redesign — Bold Athletic
+   Homepage redesign - Bold Athletic
    ========================================================== */
-:root {
-  --ath-bg: #12140f;
-  --ath-bg-soft: #1b1f18;
-  --ath-mint: #7de3ab;
-  --ath-mint-ink: #0c2b19;
-  --font-ath: 'Oswald', sans-serif;
-}
 
 /* Sharpen corners sitewide on this page only, until the rest of the site adopts this language */
 body[data-page="home"] .btn,
@@ -601,7 +584,7 @@ body[data-page="home"] .ath-tag { border-radius: 0; }
 .cta-band .container { position: relative; z-index: 1; }
 
 /* ==========================================================
-   Shared reusable pieces (Bold Athletic) — used across interior pages
+   Shared reusable pieces (Bold Athletic) - used across interior pages
    ========================================================== */
 
 /* ---------- Dark page hero (interior pages) ---------- */

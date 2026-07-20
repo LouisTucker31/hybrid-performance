@@ -2,7 +2,7 @@
    Hybrid Performance Coaching - core
    Header/footer embedded so the site works opened directly
    from file:// in a browser, and on GitHub Pages.
-   Paths are base-relative — see the <base> tag in each page's <head>.
+   Paths are base-relative, see the <base> tag in each page's <head>.
    ========================================================= */
 (function () {
   "use strict";
