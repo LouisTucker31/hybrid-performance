@@ -617,6 +617,7 @@ body[data-page="home"] .ath-tag { border-radius: 0; }
   color: #fff; font-size: clamp(1.75rem, 3.5vw, 2.4rem);
 }
 .section-dark .section-head p { color: rgba(255,255,255,0.78); }
+.section-dark .container { max-width: 980px; }
 .section-dark .phase { border-top: 1px solid rgba(255,255,255,0.12); }
 .section-dark .phase:last-child { border-bottom: 1px solid rgba(255,255,255,0.12); }
 .section-dark .phase__num { font-family: 'Oswald', sans-serif; font-weight: 600; color: #7de3ab; font-size: 1.1rem; padding-top: 0; }
