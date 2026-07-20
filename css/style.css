@@ -503,7 +503,7 @@ main { flex: 1; }
 /* ==========================================================
    Homepage redesign — Bold Athletic
    ========================================================== */
-body[data-page="home"] {
+:root {
   --ath-bg: #12140f;
   --ath-bg-soft: #1b1f18;
   --ath-mint: #7de3ab;
