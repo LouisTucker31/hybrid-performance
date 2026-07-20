@@ -645,3 +645,16 @@ body[data-page="about"] .btn,
 body[data-page="about"] .ath-card,
 body[data-page="about"] .about-media__photo { border-radius: 0; }
 body[data-page="about"] h2 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.02em; }
+
+/* ---------- Policy pages (flowing content, no card boxes) ---------- */
+.policy-block { padding-block: 1.4rem; border-top: 1px solid var(--line); }
+.policy-block:first-child { border-top: none; padding-top: 0; }
+.policy-block h3 {
+  font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.03em;
+  font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--ink);
+}
+.policy-block p, .policy-block ul { color: var(--ink-soft); }
+.policy-block .ticks li { margin-bottom: 0.6rem; }
+
+body[data-page="privacy"] .btn,
+body[data-page="terms"] .btn { border-radius: 0; }
