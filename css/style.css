@@ -659,6 +659,7 @@ body[data-page="bespoke"] .price--feature { padding-top: calc(clamp(1.4rem, 3vw,
 /* ==========================================================
    Plans page - Bold Athletic
    ========================================================== */
+body[data-page="plans"] .page-hero-photo__bg img { object-position: 50% 65%; }
 body[data-page="plans"] .btn { border-radius: 0; }
 body[data-page="plans"] .tag { border-radius: 0; }
 body[data-page="plans"] h2,
