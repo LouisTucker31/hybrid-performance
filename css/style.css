@@ -652,3 +652,6 @@ body[data-page="bespoke"] h2,
 body[data-page="bespoke"] h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.02em; }
 body[data-page="bespoke"] .price h3 { margin-bottom: 0.3rem; }
 body[data-page="bespoke"] .price .ribbon { display: block; margin-bottom: 0.6rem; }
+
+body[data-page="bespoke"] #packages .grid-3 { align-items: center; }
+body[data-page="bespoke"] .price--feature { padding-top: calc(clamp(1.4rem, 3vw, 1.9rem) + 0.85rem); padding-bottom: calc(clamp(1.4rem, 3vw, 1.9rem) + 0.85rem); }
