@@ -719,8 +719,6 @@ body[data-page="tools"] .tile:hover { border-color: var(--accent); box-shadow: n
 body[data-page="tools"] .tile h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.02em; font-size: 1.1rem; }
 body[data-page="tools"] .tile__status {
   display: inline-block;
-  background: var(--ink);
-  color: #fff;
   font-family: 'Oswald', sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
@@ -730,3 +728,12 @@ body[data-page="tools"] .tile__status {
   margin-bottom: 0.7rem;
   align-self: flex-start;
 }
+body[data-page="tools"] .tile__status.live { background: var(--ink); color: #fff; }
+body[data-page="tools"] .tile__status.soon { background: var(--line-strong); color: var(--ink-faint); }
+body[data-page="tools"] .tile--soon {
+  border-color: var(--line-strong);
+  background: var(--bg-soft);
+}
+body[data-page="tools"] .tile--soon:hover { border-color: var(--line-strong); }
+body[data-page="tools"] .tile--soon h3,
+body[data-page="tools"] .tile--soon p { color: var(--ink-faint); }
