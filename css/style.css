@@ -761,3 +761,17 @@ body[data-page="tools"] .tile--soon:hover { border-color: var(--line-strong); }
 body[data-page="tools"] .tile--soon h3,
 body[data-page="tools"] .tile--soon p,
 body[data-page="tools"] .tile--soon .tile__go { color: var(--ink-faint); cursor: default; }
+
+/* ==========================================================
+   Pace Calculator - Bold Athletic
+   ========================================================== */
+body[data-page="pace-calculator"] .btn { border-radius: 0; }
+body[data-page="pace-calculator"] .tool-output {
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  box-shadow: none;
+}
+body[data-page="pace-calculator"] .field select,
+body[data-page="pace-calculator"] .field input {
+  border-radius: 0;
+}
