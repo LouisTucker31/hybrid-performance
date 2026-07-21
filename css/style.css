@@ -676,3 +676,21 @@ body[data-page="plans"] .plan-row:hover {
 body[data-page="plans"] .plan-row--soon {
   border-color: var(--line-strong);
 }
+
+/* ==========================================================
+   Plan detail pages - Bold Athletic
+   ========================================================== */
+body[data-page="5k-plan-for-lifters"] h1,
+body[data-page="5k-plan-for-lifters"] h2,
+body[data-page="first-sprint-triathlon"] h1,
+body[data-page="first-sprint-triathlon"] h2 {
+  font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.02em;
+}
+body[data-page="5k-plan-for-lifters"] .btn,
+body[data-page="first-sprint-triathlon"] .btn,
+body[data-page="5k-plan-for-lifters"] .ath-card,
+body[data-page="first-sprint-triathlon"] .ath-card {
+  border-radius: 0;
+}
+.plan-cover { border: 2px solid var(--ink); border-radius: 0; overflow: hidden; }
+.plan-cover img { width: 100%; height: auto; display: block; }
