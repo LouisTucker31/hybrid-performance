@@ -736,4 +736,5 @@ body[data-page="tools"] .tile--soon {
 }
 body[data-page="tools"] .tile--soon:hover { border-color: var(--line-strong); }
 body[data-page="tools"] .tile--soon h3,
-body[data-page="tools"] .tile--soon p { color: var(--ink-faint); }
+body[data-page="tools"] .tile--soon p,
+body[data-page="tools"] .tile--soon .tile__go { color: var(--ink-faint); cursor: default; }
