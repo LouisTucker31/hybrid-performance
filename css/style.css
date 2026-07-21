@@ -702,3 +702,11 @@ body[data-page="first-sprint-triathlon"] .ath-card {
 .plan-hero h1 { margin-bottom: 1rem; }
 .plan-hero .lead { font-size: var(--fs-lg); color: var(--ink-soft); max-width: 52ch; margin-bottom: 1.75rem; line-height: 1.6; }
 .plan-hero .btn-row { justify-content: flex-start; margin-bottom: 1rem; }
+
+/* ==========================================================
+   Tools page - Bold Athletic
+   ========================================================== */
+body[data-page="tools"] .btn { border-radius: 0; }
+body[data-page="tools"] .tile { border: 2px solid var(--ink); border-radius: 0; box-shadow: none; }
+body[data-page="tools"] .tile:hover { border-color: var(--accent); box-shadow: none; }
+body[data-page="tools"] h2 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.02em; }
