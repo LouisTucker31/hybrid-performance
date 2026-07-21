@@ -732,6 +732,13 @@ body[data-page="tools"] .tile {
   text-align: left;
 }
 body[data-page="tools"] .tile:hover { border-color: var(--accent); box-shadow: none; }
+body[data-page="tools"] .tile:not(.tile--soon) {
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+body[data-page="tools"] .tile:not(.tile--soon):hover {
+  background: var(--accent-tint);
+  transform: translateY(-3px);
+}
 body[data-page="tools"] .tile h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.02em; font-size: 1.1rem; }
 body[data-page="tools"] .tile__status {
   display: inline-block;
