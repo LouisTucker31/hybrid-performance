@@ -694,3 +694,10 @@ body[data-page="first-sprint-triathlon"] .ath-card {
 }
 .plan-cover { border: 2px solid var(--ink); border-radius: 0; overflow: hidden; }
 .plan-cover img { width: 100%; height: auto; display: block; }
+
+/* ==========================================================
+   Plan hero-grid spacing (product detail pages)
+   ========================================================== */
+.hero-grid h1 { margin-bottom: 0.9rem; }
+.hero-grid .lead { font-size: var(--fs-lg); color: var(--ink-soft); max-width: 52ch; margin-bottom: 1.5rem; line-height: 1.55; }
+.hero-grid .btn-row { margin-bottom: 0.9rem; }
