@@ -766,7 +766,9 @@ body[data-page="tools"] .tile--soon .tile__go { color: var(--ink-faint); cursor:
    Pace Calculator - Bold Athletic
    ========================================================== */
 body[data-page="pace-calculator"] .btn { border-radius: 0; }
+body[data-page="pace-calculator"] .ath-card,
 body[data-page="pace-calculator"] .tool-output {
+  background: var(--bg-soft);
   border: 2px solid var(--ink);
   border-radius: 0;
   box-shadow: none;
