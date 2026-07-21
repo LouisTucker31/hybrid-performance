@@ -676,6 +676,18 @@ body[data-page="plans"] .plan-row:hover {
 body[data-page="plans"] .plan-row--soon {
   border-color: var(--line-strong);
 }
+body[data-page="plans"] .offer-card--soon {
+  border-color: var(--line-strong);
+  background: var(--bg-soft);
+  pointer-events: none;
+}
+body[data-page="plans"] .offer-card--soon .offer-card__num {
+  background: var(--line-strong);
+  color: var(--ink-faint);
+}
+body[data-page="plans"] .offer-card--soon h3 {
+  color: var(--ink-faint);
+}
 
 /* ==========================================================
    Plan detail pages - Bold Athletic
