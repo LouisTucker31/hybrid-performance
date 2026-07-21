@@ -710,10 +710,13 @@ body[data-page="first-sprint-triathlon"] .ath-card {
 /* ==========================================================
    Plan hero-grid spacing (product detail pages)
    ========================================================== */
-.plan-hero { padding-block: clamp(2.75rem, 6vw, 4.5rem); }
-.plan-hero h1 { margin-bottom: 1rem; }
-.plan-hero .lead { font-size: var(--fs-lg); color: var(--ink-soft); max-width: 52ch; margin-bottom: 1.75rem; line-height: 1.6; }
+.plan-hero { background: var(--ath-bg); padding-block: clamp(2.75rem, 6vw, 4.5rem); }
+.plan-hero .eyebrow { color: #7de3ab; }
+.plan-hero h1 { color: #fff; margin-bottom: 1rem; }
+.plan-hero .lead { font-size: var(--fs-lg); color: rgba(255,255,255,0.82); max-width: 52ch; margin-bottom: 1.75rem; line-height: 1.6; }
 .plan-hero .btn-row { justify-content: flex-start; margin-bottom: 1rem; }
+.plan-hero .small.muted { color: rgba(255,255,255,0.6); }
+.plan-hero .plan-cover { border: none; }
 
 /* ==========================================================
    Tools page - Bold Athletic
