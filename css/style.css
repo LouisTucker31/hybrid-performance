@@ -826,3 +826,55 @@ body[data-page="fuel-calculator"] .result-row:has(+ .form-group-title) {
   margin-bottom: 0.8rem;
 }
 .tool-notes .ticks li { margin-bottom: 0.6rem; }
+
+/* ==========================================================
+   Garmin/Strava Prompt - Bold Athletic
+   ========================================================== */
+body[data-page="strava-prompt"] .btn { border-radius: 0; }
+body[data-page="strava-prompt"] .ath-card {
+  background: var(--accent-tint);
+}
+body[data-page="strava-prompt"] .prompt-box {
+  background: #fff;
+  border: 1px solid var(--line-strong);
+  border-radius: 0;
+}
+body[data-page="strava-prompt"] h2 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 1.2rem;
+}
+body[data-page="strava-prompt"] .prompt-wrap {
+  position: relative;
+  max-height: 260px;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+body[data-page="strava-prompt"] .prompt-wrap.is-expanded {
+  max-height: 6000px;
+}
+body[data-page="strava-prompt"] .prompt-fade {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 70px;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, #fff 100%);
+  pointer-events: none;
+}
+body[data-page="strava-prompt"] .prompt-wrap.is-expanded .prompt-fade {
+  display: none;
+}
+body[data-page="strava-prompt"] .link-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+body[data-page="strava-prompt"] .link-toggle:hover {
+  color: var(--accent-dark);
+}
