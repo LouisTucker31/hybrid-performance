@@ -972,7 +972,7 @@ body[data-page="contact"] h3 {
   color: var(--ink-faint); margin-top: auto;
 }
 
-body[data-page="blog"] .page-hero-photo__bg img { object-position: 50% 65%; }
+body[data-page="blog"] .page-hero-photo__bg img { object-position: 50% 58%; }
 body[data-page="blog"] .btn { border-radius: 0; }
 body[data-page="blog"] .tag { border-radius: 0; }
 body[data-page="blog"] h2 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.02em; }
