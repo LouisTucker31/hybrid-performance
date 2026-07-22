@@ -834,6 +834,9 @@ body[data-page="strava-prompt"] .btn { border-radius: 0; }
 body[data-page="strava-prompt"] .ath-card {
   background: var(--accent-tint);
 }
+body[data-page="strava-prompt"] .prompt-wrap {
+  margin-top: 1.4rem;
+}
 body[data-page="strava-prompt"] .prompt-box {
   background: #fff;
   border: 1px solid var(--line-strong);
