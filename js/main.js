@@ -67,9 +67,18 @@
   inject("site-header", headerHTML);
   inject("site-footer", footerHTML);
 
+  var navGroups = {
+    "pace-calculator": "tools",
+    "fuel-calculator": "tools",
+    "one-rep-max-calculator": "tools",
+    "strava-prompt": "tools",
+    "5k-plan-for-lifters": "plans",
+    "first-sprint-triathlon": "plans"
+  };
   var current = document.body.getAttribute("data-page");
-  if (current) {
-    var link = document.querySelector('.nav-links a[data-page="' + current + '"]');
+  var navTarget = navGroups[current] || current;
+  if (navTarget) {
+    var link = document.querySelector('.nav-links a[data-page="' + navTarget + '"]');
     if (link) link.classList.add("is-active");
   }
 
