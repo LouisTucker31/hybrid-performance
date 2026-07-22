@@ -804,14 +804,9 @@ body[data-page="fuel-calculator"] .form-group-title {
 body[data-page="fuel-calculator"] .form-group-title.is-second {
   margin-top: 1.6rem;
   padding-top: 1.3rem;
-  border-top: 1px solid var(--line-strong);
 }
 body[data-page="fuel-calculator"] .tool-output {
   position: static;
-}
-body[data-page="fuel-calculator"] .result-row--last-in-group { border-bottom: none !important; }
-body[data-page="fuel-calculator"] .result-row:has(+ .form-group-title) {
-  border-bottom: none !important;
 }
 
 /* ==========================================================
@@ -900,11 +895,4 @@ body[data-page="one-rep-max-calculator"] .field input {
 body[data-page="one-rep-max-calculator"] .form-group-title.is-second {
   margin-top: 1.6rem;
   padding-top: 1.3rem;
-  border-top: 1px solid var(--line-strong);
-}
-body[data-page="one-rep-max-calculator"] .result-row:has(+ .form-group-title) {
-  border-bottom: none !important;
-}
-body[data-page="one-rep-max-calculator"] .result-row--no-border {
-  border-bottom: none !important;
 }
