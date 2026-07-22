@@ -777,3 +777,19 @@ body[data-page="pace-calculator"] .field select,
 body[data-page="pace-calculator"] .field input {
   border-radius: 0;
 }
+
+/* ==========================================================
+   Fuel Calculator - Bold Athletic
+   ========================================================== */
+body[data-page="fuel-calculator"] .btn { border-radius: 0; }
+body[data-page="fuel-calculator"] .ath-card,
+body[data-page="fuel-calculator"] .tool-output {
+  background: var(--accent-tint);
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  box-shadow: none;
+}
+body[data-page="fuel-calculator"] .field select,
+body[data-page="fuel-calculator"] .field input {
+  border-radius: 0;
+}

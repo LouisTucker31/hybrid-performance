@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <base href="https://louistucker31.github.io/hybrid-performance/" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <title>Cycling Fuel Calculator | Hybrid Performance Coaching</title>
+  <meta name="description" content="Estimate the carbs and fluid you need for a long ride based on duration and intensity." />
+  <meta property="og:title" content="Cycling Fuel Calculator | Hybrid Performance Coaching" />
+  <meta property="og:description" content="Estimate the carbs and fluid you need for a long ride based on duration and intensity." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://hybridperformancecoaching.co.uk/assets/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="canonical" href="https://hybridperformancecoaching.co.uk/tools/fuel-calculator/" />
+</head>
+<body data-page="fuel-calculator">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero-dark">
+      <div class="container">
+        <span class="eyebrow">Free Tool</span>
+        <h1>Cycling Fuel Calculator</h1>
+        <p>Estimate carbs and fluid for a long ride based on duration and intensity.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="tool-shell">
+          <div class="ath-card">
+            <div class="field">
+              <label>Ride duration</label>
+              <div class="field-row" style="grid-template-columns:1fr 1fr">
+                <input type="number" id="ride-h" placeholder="hh" min="0" inputmode="numeric" />
+                <input type="number" id="ride-m" placeholder="mm" min="0" max="59" inputmode="numeric" />
+              </div>
+              <span class="hint small">e.g. a 3 hour ride: hh 3, mm 00.</span>
+            </div>
+
+            <div class="field" style="margin-top:1.1rem">
+              <label for="intensity">Intensity</label>
+              <select id="intensity">
+                <option value="30-500">Easy</option>
+                <option value="60-650" selected>Moderate</option>
+                <option value="90-750">Hard</option>
+              </select>
+              <span class="hint small">Higher intensity needs more carbs per hour to sustain effort.</span>
+            </div>
+          </div>
+
+          <div class="tool-output">
+            <span class="eyebrow">Your Fuel Plan</span>
+            <div class="result-row">
+              <span class="k">Carbs / hour</span>
+              <span class="v is-empty" id="out-carb-rate">&mdash;</span>
+            </div>
+            <div class="result-row">
+              <span class="k">Total carbs</span>
+              <span class="v is-empty" id="out-carb-total">&mdash;</span>
+            </div>
+            <div class="result-row">
+              <span class="k">Total fluid</span>
+              <span class="v is-empty" id="out-fluid-total">&mdash;</span>
+            </div>
+            <div class="result-row">
+              <span class="k">Approx. gels needed</span>
+              <span class="v is-empty" id="out-gels">&mdash;</span>
+            </div>
+            <p class="small muted" id="out-note" style="margin-top:0.9rem">Enter your ride duration above to see your fuel targets.</p>
+          </div>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="btn-row">
+          <a class="btn btn--ghost" href="tools/">&larr; All tools</a>
+          <a class="btn btn--primary" href="bespoke/">Build this into a plan</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+  <script>
+    (function () {
+      "use strict";
+      var hEl = document.getElementById("ride-h");
+      var mEl = document.getElementById("ride-m");
+      var intensityEl = document.getElementById("intensity");
+      var outCarbRate = document.getElementById("out-carb-rate");
+      var outCarbTotal = document.getElementById("out-carb-total");
+      var outFluidTotal = document.getElementById("out-fluid-total");
+      var outGels = document.getElementById("out-gels");
+      var outNote = document.getElementById("out-note");
+
+      function setResult(el, text) {
+        el.textContent = text;
+        if (text === "\u2014") {
+          el.classList.add("is-empty");
+        } else {
+          el.classList.remove("is-empty");
+        }
+      }
+
+      function calculate() {
+        var h = parseInt(hEl.value, 10) || 0;
+        var m = parseInt(mEl.value, 10) || 0;
+        var durationHours = h + (m / 60);
+
+        if (durationHours <= 0) {
+          setResult(outCarbRate, "\u2014");
+          setResult(outCarbTotal, "\u2014");
+          setResult(outFluidTotal, "\u2014");
+          setResult(outGels, "\u2014");
+          outNote.style.display = "block";
+          return;
+        }
+
+        outNote.style.display = "none";
+
+        var parts = intensityEl.value.split("-");
+        var carbPerHour = parseInt(parts[0], 10);
+        var fluidPerHour = parseInt(parts[1], 10);
+
+        var totalCarbs = Math.round(carbPerHour * durationHours);
+        var totalFluidMl = Math.round(fluidPerHour * durationHours);
+        var totalFluidL = (totalFluidMl / 1000).toFixed(1);
+        var gels = Math.round(totalCarbs / 25);
+
+        setResult(outCarbRate, carbPerHour + " g/hr");
+        setResult(outCarbTotal, totalCarbs + " g");
+        setResult(outFluidTotal, totalFluidL + " L");
+        setResult(outGels, gels + (gels === 1 ? " gel" : " gels"));
+      }
+
+      [hEl, mEl, intensityEl].forEach(function (el) {
+        el.addEventListener("input", calculate);
+        el.addEventListener("change", calculate);
+      });
+
+      calculate();
+    })();
+  </script>
+</body>
+</html>
