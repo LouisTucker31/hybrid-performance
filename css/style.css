@@ -802,8 +802,7 @@ body[data-page="fuel-calculator"] .form-group-title {
   margin-bottom: 0.5rem;
 }
 body[data-page="fuel-calculator"] .form-group-title.is-second {
-  margin-top: 1.6rem;
-  padding-top: 1.3rem;
+  margin-top: 1rem;
 }
 body[data-page="fuel-calculator"] .tool-output {
   position: static;
@@ -893,6 +892,14 @@ body[data-page="one-rep-max-calculator"] .field input {
   border-radius: 0;
 }
 body[data-page="one-rep-max-calculator"] .form-group-title.is-second {
-  margin-top: 1.6rem;
-  padding-top: 1.3rem;
+  margin-top: 1rem;
+}
+
+/* ==========================================================
+   Tool output group divider (explicit, not a row border)
+   ========================================================== */
+.tool-group-divider {
+  border: none;
+  border-top: 1px solid var(--line-strong);
+  margin: 1.3rem 0 0;
 }
