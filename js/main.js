@@ -21,7 +21,8 @@
         <li><a href="about/" data-page="about">About</a></li>
         <li><a href="bespoke/" data-page="bespoke">Bespoke</a></li>
         <li><a href="plans/" data-page="plans">Plans</a></li>
-        <li><a href="tools/" data-page="tools">Free Tools</a></li>
+        <li><a href="tools/" data-page="tools">Tools</a></li>
+        <li><a href="blog/" data-page="blog">Blog</a></li>
         <li><a href="contact/" data-page="contact">Contact</a></li>
       </ul>
     </nav>
@@ -36,7 +37,8 @@
       <li><a href="about/">About</a></li>
       <li><a href="bespoke/">Bespoke</a></li>
       <li><a href="plans/">Plans</a></li>
-      <li><a href="tools/">Free Tools</a></li>
+      <li><a href="tools/">Tools</a></li>
+      <li><a href="blog/">Blog</a></li>
       <li><a href="contact/">Contact</a></li>
       <li><a href="privacy/">Privacy Policy</a></li>
       <li><a href="terms/">Terms of Service</a></li>
