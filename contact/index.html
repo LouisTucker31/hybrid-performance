@@ -89,7 +89,12 @@
                 <textarea id="message" name="message" rows="5" placeholder="What would you like to know?" required></textarea>
               </div>
 
-              <p class="form-note">By submitting this form your details are sent via Formspree to respond to your message. See my <a href="privacy/" style="color:var(--accent)">Privacy Policy</a>.</p>
+              <label class="consent-check">
+                <input type="checkbox" id="consent" name="consent" required />
+                <span>I agree to my information being used to respond to this enquiry, as set out in the <a href="privacy/" style="color:var(--accent)">Privacy Policy</a>.</span>
+              </label>
+
+              <p class="form-note">By submitting this form your details are sent via Formspree to respond to your message.</p>
 
               <button type="submit" class="btn btn--primary btn--block">Send message</button>
             </form>
@@ -129,6 +134,34 @@
 
       interestEl.addEventListener("change", function () {
         bespokeFields.hidden = interestEl.value !== "Bespoke Plan";
+      });
+
+      var form = document.getElementById("contact-form");
+      var successEl = document.getElementById("form-success");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var data = new FormData(form);
+
+        fetch(form.action, {
+          method: "POST",
+          body: data,
+          headers: { "Accept": "application/json" }
+        }).then(function (response) {
+          if (response.ok) {
+            form.hidden = true;
+            successEl.classList.add("show");
+          } else {
+            response.json().then(function (result) {
+              var msg = (result && result.errors)
+                ? result.errors.map(function (err) { return err.message; }).join(", ")
+                : "Something went wrong sending your message. Please try again or email me directly.";
+              alert(msg);
+            });
+          }
+        }).catch(function () {
+          alert("Something went wrong sending your message. Please try again or email me directly.");
+        });
       });
     })();
   </script>

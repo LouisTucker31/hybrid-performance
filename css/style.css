@@ -931,6 +931,25 @@ body[data-page="contact"] h3 {
 .contact-extra-fields { display: grid; gap: 0.9rem; }
 .contact-extra-fields[hidden] { display: none; }
 
+.contact-side .ath-card p + .btn-row { margin-top: 1rem; }
+
+.consent-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.consent-check input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
 /* ==========================================================
    Tool output group divider (explicit, not a row border)
    ========================================================== */
