@@ -321,6 +321,7 @@ main { flex: 1; }
 .form { display: grid; gap: 0.9rem; }
 .field { display: grid; gap: 0.3rem; }
 .field label { font-size: var(--fs-sm); font-weight: 600; }
+.field label .required-mark { color: var(--accent); margin-left: 0.15rem; }
 .field .hint { font-weight: 400; color: var(--ink-faint); }
 .field input, .field select, .field textarea {
   font: inherit; font-size: 16px;
@@ -330,6 +331,7 @@ main { flex: 1; }
   background: #fff; color: var(--ink); width: 100%;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
+.field select { padding-right: 2rem; }
 .field input:focus, .field select:focus, .field textarea:focus {
   outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft);
 }
@@ -524,7 +526,6 @@ body[data-page="home"] .ath-tag { border-radius: 0; }
 }
 .home-hero-full__content .lead { color: rgba(255,255,255,0.85); font-size: var(--fs-lg); max-width: 44ch; margin-bottom: 1.75rem; line-height: 1.55; }
 .home-hero-full__content .btn-row { justify-content: flex-start; }
-.home-hero-full__link { color: #fff; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
 
 .btn--ath-primary {
   background: var(--ath-mint); color: var(--ath-mint-ink); font-family: var(--font-ath);
