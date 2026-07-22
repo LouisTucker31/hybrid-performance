@@ -982,15 +982,6 @@ body[data-page="blog"] h2 { font-family: 'Oswald', sans-serif; text-transform: u
    Blog post pages - shared (Bold Athletic)
    ========================================================== */
 .post-hero .btn { border-radius: 0; }
-.post-hero .post-back {
-  display: inline-block;
-  margin-bottom: 1rem;
-  color: #7de3ab;
-  font-weight: 600;
-  font-size: var(--fs-sm);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
 .post-hero .post-meta {
   color: rgba(255,255,255,0.65);
   font-size: var(--fs-sm);
@@ -998,12 +989,6 @@ body[data-page="blog"] h2 { font-family: 'Oswald', sans-serif; text-transform: u
 }
 
 .post-content { max-width: 700px; margin-inline: auto; }
-.post-content .lead {
-  font-size: var(--fs-lg);
-  color: var(--ink-soft);
-  margin-bottom: 1.6rem;
-  line-height: 1.6;
-}
 .post-content h2 {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
@@ -1011,21 +996,21 @@ body[data-page="blog"] h2 { font-family: 'Oswald', sans-serif; text-transform: u
   font-size: 1.35rem;
   margin: 2.2rem 0 0.9rem;
 }
-.post-content p { margin-bottom: 1.1rem; max-width: none; line-height: 1.7; }
+.post-content p { margin-bottom: 1.5rem; max-width: none; line-height: 1.7; }
 .post-content ul.ticks { margin: 1rem 0 1.6rem; }
-.post-content ul.ticks li { max-width: none; }
+.post-content ul.ticks li { max-width: none; color: var(--ink); }
 
 .post-pullquote {
   border-left: 3px solid var(--accent);
   padding-left: 1.2rem;
   margin: 1.8rem 0;
-  font-size: var(--fs-lg);
   color: var(--ink);
   font-style: italic;
   max-width: none;
 }
 
 .post-callout { margin: 2rem 0; }
+.post-callout h3 { margin-bottom: 0.6rem; }
 .post-callout .btn { border-radius: 0; margin-top: 0.9rem; }
 
 .post-author {
