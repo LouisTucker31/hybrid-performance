@@ -903,3 +903,6 @@ body[data-page="one-rep-max-calculator"] .form-group-title.is-second {
   border-top: 1px solid var(--line-strong);
   margin: 1.3rem 0 0;
 }
+
+.result-row--tight { border-bottom: none; }
+.tool-group-divider { border: none; border-top: 1px solid var(--line-strong); margin: 0 0 1.3rem; }
