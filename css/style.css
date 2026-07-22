@@ -323,7 +323,7 @@ main { flex: 1; }
 .field label { font-size: var(--fs-sm); font-weight: 600; }
 .field .hint { font-weight: 400; color: var(--ink-faint); }
 .field input, .field select, .field textarea {
-  font: inherit; font-size: var(--fs-base);
+  font: inherit; font-size: 16px;
   padding: 0.6rem 0.7rem;
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-sm);
@@ -806,4 +806,17 @@ body[data-page="fuel-calculator"] .form-group-title.is-second {
   padding-top: 1.3rem;
   border-top: 1px solid var(--line-strong);
 }
-body[data-page="fuel-calculator"] .tool-output .result-row:nth-of-type(2) { border-bottom: none; }
+body[data-page="fuel-calculator"] .result-row--last-in-group { border-bottom: none !important; }
+
+/* ==========================================================
+   Tool notes ("How to read this") - shared, unboxed
+   ========================================================== */
+.tool-notes { max-width: 640px; margin: 2rem auto 0; }
+.tool-notes h3 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 1.05rem;
+  margin-bottom: 0.8rem;
+}
+.tool-notes .ticks li { margin-bottom: 0.6rem; }
