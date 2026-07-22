@@ -896,6 +896,42 @@ body[data-page="one-rep-max-calculator"] .form-group-title.is-second {
 }
 
 /* ==========================================================
+   Contact page - Bold Athletic
+   ========================================================== */
+body[data-page="contact"] .btn { border-radius: 0; }
+body[data-page="contact"] .field select,
+body[data-page="contact"] .field input,
+body[data-page="contact"] .field textarea { border-radius: 0; }
+body[data-page="contact"] h3 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 1.05rem;
+  margin-bottom: 0.9rem;
+}
+
+.contact-shell {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  align-items: start;
+}
+@media (max-width: 860px) {
+  .contact-shell { grid-template-columns: 1fr; }
+}
+
+.contact-side {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+}
+.contact-side .ticks li a { color: var(--accent); font-weight: 600; }
+.contact-side .ticks li a:hover { color: var(--accent-dark); }
+
+.contact-extra-fields { display: grid; gap: 0.9rem; }
+.contact-extra-fields[hidden] { display: none; }
+
+/* ==========================================================
    Tool output group divider (explicit, not a row border)
    ========================================================== */
 .tool-group-divider {
