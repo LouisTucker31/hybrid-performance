@@ -881,3 +881,27 @@ body[data-page="strava-prompt"] .link-toggle {
 body[data-page="strava-prompt"] .link-toggle:hover {
   color: var(--accent-dark);
 }
+
+/* ==========================================================
+   One-Rep Max Calculator - Bold Athletic
+   ========================================================== */
+body[data-page="one-rep-max-calculator"] .btn { border-radius: 0; }
+body[data-page="one-rep-max-calculator"] .ath-card,
+body[data-page="one-rep-max-calculator"] .tool-output {
+  background: var(--accent-tint);
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  box-shadow: none;
+}
+body[data-page="one-rep-max-calculator"] .field select,
+body[data-page="one-rep-max-calculator"] .field input {
+  border-radius: 0;
+}
+body[data-page="one-rep-max-calculator"] .form-group-title.is-second {
+  margin-top: 1.6rem;
+  padding-top: 1.3rem;
+  border-top: 1px solid var(--line-strong);
+}
+body[data-page="one-rep-max-calculator"] .result-row:has(+ .form-group-title) {
+  border-bottom: none !important;
+}
