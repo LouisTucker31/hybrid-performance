@@ -141,7 +141,7 @@
         var reps = parseInt(repsEl.value, 10);
         var unit = unitEl.value;
 
-        if (!weight || weight <= 0 || !reps || reps <= 0) {
+        if (!weight || weight <= 0 || !reps || reps <= 0 || reps > 12) {
           setResult(out1rm, "\u2014");
           setResult(out90, "\u2014");
           setResult(out80, "\u2014");

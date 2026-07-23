@@ -148,26 +148,37 @@ Once this report exists, treat it as "last week's report" for next time — if I
       var toggleBtn = document.getElementById("toggle-btn");
       var promptWrap = document.getElementById("prompt-wrap");
 
+      var COPY_LABEL = copyBtn.textContent;
+      var copyTimer = null;
+
       copyBtn.addEventListener("click", function () {
         var text = promptText.textContent;
         if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text).then(showCopied, showCopied);
+          navigator.clipboard.writeText(text).then(
+            function () { flash("Copied!"); },
+            function () { flash("Press Ctrl+C to copy"); selectPrompt(); }
+          );
         } else {
-          var range = document.createRange();
-          range.selectNode(promptText);
+          selectPrompt();
+          var ok = false;
+          try { ok = document.execCommand("copy"); } catch (err) { ok = false; }
           window.getSelection().removeAllRanges();
-          window.getSelection().addRange(range);
-          document.execCommand("copy");
-          window.getSelection().removeAllRanges();
-          showCopied();
+          flash(ok ? "Copied!" : "Press Ctrl+C to copy");
         }
       });
 
-      function showCopied() {
-        var original = copyBtn.textContent;
-        copyBtn.textContent = "Copied!";
-        setTimeout(function () {
-          copyBtn.textContent = original;
+      function selectPrompt() {
+        var range = document.createRange();
+        range.selectNode(promptText);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+      }
+
+      function flash(msg) {
+        copyBtn.textContent = msg;
+        clearTimeout(copyTimer);
+        copyTimer = setTimeout(function () {
+          copyBtn.textContent = COPY_LABEL;
         }, 1800);
       }
 
