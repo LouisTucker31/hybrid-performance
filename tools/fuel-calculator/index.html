@@ -7,6 +7,8 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="icon" sizes="192x192" href="assets/favicon-192.png" />
+  <link rel="icon" sizes="512x512" href="assets/favicon-512.png" />
   <title>Cycling Fuel Calculator | Hybrid Performance Coaching</title>
   <meta name="description" content="Estimate the carbs and fluid you need for a long ride based on duration, intensity and conditions." />
   <meta property="og:title" content="Cycling Fuel Calculator | Hybrid Performance Coaching" />
@@ -41,10 +43,10 @@
         <div class="tool-shell">
           <div class="ath-card">
             <div class="field">
-              <label>Ride duration</label>
-              <div class="field-row" style="grid-template-columns:1fr 1fr">
-                <input type="number" id="ride-h" placeholder="hh" min="0" inputmode="numeric" />
-                <input type="number" id="ride-m" placeholder="mm" min="0" max="59" inputmode="numeric" />
+              <span class="field-label" id="ride-duration-label">Ride duration</span>
+              <div class="field-row" style="grid-template-columns:1fr 1fr" role="group" aria-labelledby="ride-duration-label">
+                <input type="number" id="ride-h" placeholder="hh" min="0" inputmode="numeric" aria-label="Hours" />
+                <input type="number" id="ride-m" placeholder="mm" min="0" max="59" inputmode="numeric" aria-label="Minutes" />
               </div>
               <span class="hint small">e.g. a 3 hour ride: hh 3, mm 00.</span>
             </div>

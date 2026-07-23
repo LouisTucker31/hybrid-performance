@@ -9,7 +9,7 @@
   --bg-soft: #f6f7f6;
   --ink: #1a1d1b;
   --ink-soft: #54595a;
-  --ink-faint: #6f7573;
+  --ink-faint: #676d6b;
   --line: #e7e9e8;
   --line-strong: #d7dad8;
 
@@ -284,7 +284,8 @@ main { flex: 1; }
 /* ---------- Forms ---------- */
 .form { display: grid; gap: 0.9rem; }
 .field { display: grid; gap: 0.3rem; }
-.field label { font-size: var(--fs-sm); font-weight: 600; }
+.field label, .field-label { font-size: var(--fs-sm); font-weight: 600; }
+.field-label { display: block; }
 .field label .required-mark { color: var(--accent); margin-left: 0.15rem; }
 .field .hint { font-weight: 400; color: var(--ink-faint); }
 .field input, .field select, .field textarea {
@@ -366,12 +367,13 @@ main { flex: 1; }
   display: flex; flex-direction: column;
   align-items: center; justify-content: center; gap: 0.6rem;
 }
-.about-media__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; }
+.about-media__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .cred-group + .cred-group { margin-top: 1.4rem; padding-top: 1.4rem; border-top: 1px solid var(--line); }
 .cred-group__label { font-size: var(--fs-xs); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
 @media (max-width: 720px) {
   .about-media { grid-template-columns: 1fr; }
   .about-media__photo { min-height: 220px; order: -1; }
+  .about-media__photo img { object-position: 50% 18%; }
 }
 
 /* ---------- Quote block ---------- */
@@ -928,3 +930,49 @@ body[data-page="blog"] h2 { font-family: 'Oswald', sans-serif; text-transform: u
    ========================================================== */
 .result-row--tight { border-bottom: none; }
 .tool-group-divider { border: none; border-top: 1px solid var(--line-strong); margin: 0 0 1.3rem; }
+
+/* ==========================================================
+   Print
+   ========================================================== */
+@media print {
+  .site-header,
+  .site-footer,
+  .skip-link,
+  .cta-band,
+  .nav-toggle,
+  .btn,
+  .page-hero-photo__bg { display: none !important; }
+
+  body { background: #fff !important; color: #000; font-size: 11pt; }
+
+  .page-hero-dark,
+  .page-hero-photo,
+  .stat-band,
+  .section-dark {
+    background: #fff !important;
+    padding-block: 0.5rem !important;
+    min-height: 0 !important;
+  }
+  .page-hero-dark h1,
+  .page-hero-photo__content h1,
+  .page-hero-dark p,
+  .page-hero-photo__content p,
+  .stat-strip__num,
+  .stat-strip__label,
+  .section-dark .section-head h2,
+  .section-dark .section-head p,
+  .section-dark .phase h3,
+  .section-dark .phase p { color: #000 !important; }
+
+  .ath-card,
+  .offer-card,
+  .blog-card,
+  .tool-output { border: 1px solid #999 !important; break-inside: avoid; }
+
+  .section { padding-block: 0.75rem !important; }
+  h1, h2, h3 { break-after: avoid; }
+  p, li { orphans: 3; widows: 3; }
+
+  /* show link destinations, since they aren't clickable on paper */
+  .post-content a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
+}

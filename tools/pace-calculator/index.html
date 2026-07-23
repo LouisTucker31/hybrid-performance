@@ -7,6 +7,8 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="icon" sizes="192x192" href="assets/favicon-192.png" />
+  <link rel="icon" sizes="512x512" href="assets/favicon-512.png" />
   <title>Pace Calculator | Hybrid Performance Coaching</title>
   <meta name="description" content="Set a goal finish time and distance, and get the pace you need to hold per km and per mile, plus speed and halfway split." />
   <meta property="og:title" content="Pace Calculator | Hybrid Performance Coaching" />
@@ -56,11 +58,11 @@
             </div>
 
             <div class="field" style="margin-top:1.1rem">
-              <label>Goal finish time</label>
-              <div class="field-row" style="grid-template-columns:1fr 1fr 1fr">
-                <input type="number" id="goal-h" placeholder="hh" min="0" inputmode="numeric" />
-                <input type="number" id="goal-m" placeholder="mm" min="0" max="59" inputmode="numeric" />
-                <input type="number" id="goal-s" placeholder="ss" min="0" max="59" inputmode="numeric" />
+              <span class="field-label" id="goal-time-label">Goal finish time</span>
+              <div class="field-row" style="grid-template-columns:1fr 1fr 1fr" role="group" aria-labelledby="goal-time-label">
+                <input type="number" id="goal-h" placeholder="hh" min="0" inputmode="numeric" aria-label="Hours" />
+                <input type="number" id="goal-m" placeholder="mm" min="0" max="59" inputmode="numeric" aria-label="Minutes" />
+                <input type="number" id="goal-s" placeholder="ss" min="0" max="59" inputmode="numeric" aria-label="Seconds" />
               </div>
               <span class="hint small">Leave hours blank for shorter runs. 5K in 25:00 = mm 25.</span>
             </div>
